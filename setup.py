@@ -25,7 +25,7 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
-        "Topic :: Internet :: WWW/HTTP :: HTTP Servers"
+        "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     python_requires='>=3.8',
