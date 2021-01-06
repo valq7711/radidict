@@ -14,6 +14,7 @@ def name_filter(route_rest):
         selector = 2
     return name, len(name), selector
 
+
 routes = {
     'a/b/c' : ['a/b/c', None],
     'a1/b1/c1' : ['a1/b1/c1', None],
@@ -105,17 +106,14 @@ class TestURL(unittest.TestCase):
 
     def test_hooks(self):
         on_route = 'user/\r'
-        hook_data = f'{on_route}-hook' # can be anything
-        self.rd.add_hooks(on_route, hook_data, {'name':[False, name_filter]})
+        hook_data = f'{on_route}-hook'  # can be anything
+        self.rd.add_hooks(on_route, hook_data, {'name': [False, name_filter]})
         data, param_names, param_values, hooks = self.rd.get('user/tom/profile')
         self.assertEqual(data, 'user/\r2/profile')
         self.assertEqual(param_values, ['tom'])
         self.assertEqual(param_names, ['name'])
         hook_pos = len(on_route.replace('\r', param_values[0]))
         self.assertEqual(hooks, [ [hook_pos, hook_data] ])
-
-
-
 
 
 if __name__ == "__main__":
