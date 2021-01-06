@@ -1,4 +1,6 @@
-import time
+import os, sys
+sys.path.append(os.path.normpath(os.path.join(__file__, '../..')))
+
 import unittest
 from radidict import RadiDict
 
