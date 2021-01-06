@@ -10,7 +10,7 @@ build:
 install: build
 	python3 setup.py install
 test: build
-	python3 test.py
+	python3 ./test/test.py
 push: test
 	git push origin master
 
