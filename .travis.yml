@@ -6,7 +6,7 @@ language: python
 python:
   - "3.8"
   - "3.9"
-  - "pypy"
+  - "pypy3.5"
 
 script:
   - make test
