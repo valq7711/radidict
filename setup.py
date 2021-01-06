@@ -4,7 +4,7 @@ from setuptools import setup
 import radidict
 
 setup(
-    name="radidict",
+    name="radidict-Val",
     version=radidict.__version__,
     url="https://github.com/valq7711/radidict",
     license=radidict.__license__,
@@ -28,5 +28,6 @@ setup(
         "Topic :: Internet :: WWW/HTTP :: HTTP Servers"
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
+    python_requires='>=3.8',
 
 )
